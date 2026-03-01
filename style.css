@@ -144,3 +144,7 @@ footer {
     object-fit: cover;
     margin-bottom: 20px;
 }
+
+html {
+    scroll-behavior: smooth;
+}
