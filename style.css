@@ -1,3 +1,4 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -7,25 +8,49 @@
 
 body {
     background-color: #f5f1e8;
+    line-height: 1.6;
 }
 
-/* Header */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px;
+    padding: 20px 30px;
     background-color: white;
     border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
 }
 
+/* Mobile menu button */
+#menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* NAVIGATION */
+nav .nav-links {
+    display: flex;
+    gap: 25px;
+}
+
 nav a {
-    margin-left: 30px;
     text-decoration: none;
     color: #333;
     font-size: 16px;
@@ -35,35 +60,30 @@ nav a:hover {
     color: #c9a227;
 }
 
-/* Hero */
+/* HERO */
 .hero {
-    height: 600px;
-    background-color: #0b3d2e;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     padding: 20px;
+    color: white;
+    background-color: #0b3d2e;
+    text-align: center;
 }
 
 .hero h1 {
-    font-size: 72px;
-    margin-bottom: 20px;
+    font-size: 48px;
+    margin-top: 20px;
 }
 
 .hero p {
-    font-size: 22px;
-    margin-bottom: 30px;
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 .hero button {
-    padding: 15px 30px;
+    padding: 12px 25px;
     background-color: #c9a227;
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 6px;
+    margin-top: 15px;
     cursor: pointer;
 }
 
@@ -71,80 +91,111 @@ nav a:hover {
     background-color: #b8921f;
 }
 
-/* About */
+/* ABOUT */
 .about {
-    padding: 80px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .about h2 {
-    font-size: 40px;
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
 .about p {
-    font-size: 18px;
     max-width: 800px;
     margin: auto;
+    font-size: 18px;
 }
 
-/* Cards */
+/* CARDS */
 .cards {
-    padding: 80px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .cards h2 {
-    font-size: 40px;
-    margin-bottom: 40px;
+    font-size: 32px;
+    margin-bottom: 30px;
 }
 
 .card-container {
     display: flex;
-    justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .card {
     background-color: white;
-    width: 260px;
+    width: 90%;
+    max-width: 260px;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.card h3 {
-    margin-bottom: 15px;
-}
-
-.card p {
-    font-size: 15px;
-}
-
-/* Footer */
+/* FOOTER */
 footer {
     background-color: #0b3d2e;
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 25px;
+    margin-top: 40px;
 }
 
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .hero h1 { font-size: 38px; }
+    .hero p { font-size: 17px; }
+
+    header {
+        padding: 20px;
+    }
 }
 
-.hero img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    margin-bottom: 20px;
+@media (max-width: 700px) {
+
+    /* Show hamburger menu */
+    #menu-toggle {
+        display: block;
+    }
+
+    /* Hide links until toggled */
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        padding: 15px;
+        border-top: 1px solid #ddd;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px 0;
+        font-size: 18px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .about h2,
+    .cards h2 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
 }
 
-html {
-    scroll-behavior: smooth;
+@media (max-width: 480px) {
+    .hero h1 { font-size: 28px; }
+    .hero p { font-size: 15px; }
+    .hero button { font-size: 14px; padding: 10px 20px; }
 }

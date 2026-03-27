@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- By Grant Capers -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Black Ummah</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,12 +12,18 @@
     <!-- Header -->
     <header>
         <div class="logo">The Black Ummah</div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
+
         <nav>
-            <a href="#home">Home</a>
-            <a href="#beliefs">Beliefs & Practices</a>
-            <a href="#quran">Qur'an</a>
-            <a href="#america">Islam in America</a>
-            <a href="#blackmuslims">African-American Muslims</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#beliefs">Beliefs & Practices</a>
+                <a href="#quran">Qur'an</a>
+                <a href="#america">Islam in America</a>
+                <a href="#blackmuslims">African-American Muslims</a>
+            </div>
         </nav>
     </header>
 
@@ -118,6 +126,12 @@
     <footer>
         <p>© 2026 Islam in America Project | Educational Use Only</p>
     </footer>
+
+<script>
+document.getElementById("menu-toggle").onclick = function() {
+    document.querySelector(".nav-links").classList.toggle("active");
+};
+</script>
 
 </body>
 </html>
