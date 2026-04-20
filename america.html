@@ -1,46 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Islam in America</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Islam in America</h1>
+<header class="header">
+    <div class="logo">The Black Ummah</div>
+    <button id="menu-toggle">☰</button>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="beliefs.html">Beliefs</a>
-        <a href="quran.html">Qur'an</a>
-        <a href="america.html">Islam in America</a>
-        <a href="blackmuslims.html">African American Muslims</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="beliefs.html">Beliefs</a>
+            <a href="quran.html">Qur'an</a>
+            <a href="america.html" class="active">Islam in America</a>
+            <a href="blackmuslims.html">African-American Muslims</a>
+        </div>
     </nav>
 </header>
 
-<section class="container">
-    <div class="cards">
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <img src="images/animatedmosque.jpg" alt="Mosque with American Flag">
+    <div class="hero-content">
+        <h1>Islam in America</h1>
+        <p>A rich history shaped by resilience, diversity, and community.</p>
+    </div>
+</section>
+
+<section class="about fade-in">
+    <h2>History of Islam in the U.S.</h2>
+    <p>
+        Islam has been present in America since the 1600s, brought by enslaved West African Muslims. 
+        Despite oppression, many preserved elements of their faith and culture.
+    </p>
+    <p>
+        Today, Islam is one of the fastest-growing religions in the United States, represented by 
+        African-American, Arab, South Asian, West African, Latino, and many other communities.
+    </p>
+</section>
+
+<section class="cards fade-in">
+    <h2>Key Themes</h2>
+
+    <div class="card-container">
 
         <div class="card">
             <h3>Early History</h3>
-            <p>Islam has been present in America since enslaved West Africans brought their faith in the 1700s.</p>
+            <p>Enslaved African Muslims formed the earliest Muslim presence in the Americas.</p>
         </div>
 
         <div class="card">
             <h3>Modern Growth</h3>
-            <p>Islam is one of the fastest-growing religions in the United States today.</p>
+            <p>Immigration and conversion have expanded the Muslim population nationwide.</p>
         </div>
 
         <div class="card">
             <h3>Community Impact</h3>
-            <p>Muslim Americans contribute in education, healthcare, business, politics, and social justice.</p>
+            <p>Muslims contribute to education, healthcare, business, politics, and social justice.</p>
         </div>
 
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Educational Islam Website</p>
+    <p>© 2026 The Black Ummah | Educational Use Only</p>
 </footer>
+
+<script>
+document.getElementById("menu-toggle").onclick = function() {
+    document.querySelector(".nav-links").classList.toggle("active");
+};
+</script>
 
 </body>
 </html>
