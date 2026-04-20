@@ -1,201 +1,277 @@
-/* RESET */
+/* --------------------------------------------------
+   RESET & GLOBAL
+-------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
 }
 
 body {
-    background-color: #f5f1e8;
-    line-height: 1.6;
+    background-color: #f4efe6;
+    color: #222;
+    line-height: 1.7;
+    scroll-behavior: smooth;
 }
 
 img {
     max-width: 100%;
-    height: auto;
     display: block;
+    border-radius: 8px;
 }
 
-/* HEADER */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-    background-color: white;
-    border-bottom: 1px solid #ddd;
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --------------------------------------------------
+   HEADER
+-------------------------------------------------- */
+.header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    background: #ffffff;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
 }
 
 .logo {
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: 700;
+    color: #0b3d2e;
 }
 
 /* Mobile menu button */
 #menu-toggle {
     display: none;
-    font-size: 28px;
+    font-size: 32px;
     background: none;
     border: none;
     cursor: pointer;
+    color: #0b3d2e;
 }
 
-/* NAVIGATION */
-nav .nav-links {
+/* Navigation */
+.nav-links {
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 
 nav a {
     text-decoration: none;
     color: #333;
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #c9a227;
 }
 
-/* HERO */
+/* --------------------------------------------------
+   HERO SECTION
+-------------------------------------------------- */
 .hero {
-    padding: 20px;
-    color: white;
-    background-color: #0b3d2e;
+    position: relative;
+    height: 85vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(55%);
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 30, 20, 0.45);
+}
+
+.hero-content {
+    position: relative;
     text-align: center;
+    color: white;
+    max-width: 700px;
+    padding: 20px;
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-top: 20px;
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 15px;
 }
 
 .hero p {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #c9a227;
+    color: white;
     font-size: 18px;
-    margin-top: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.hero button {
-    padding: 12px 25px;
-    background-color: #c9a227;
-    border: none;
-    border-radius: 6px;
-    margin-top: 15px;
-    cursor: pointer;
+.btn:hover {
+    background: #b8921f;
 }
 
-.hero button:hover {
-    background-color: #b8921f;
-}
-
-/* ABOUT */
+/* --------------------------------------------------
+   ABOUT SECTIONS
+-------------------------------------------------- */
 .about {
-    padding: 50px 20px;
+    padding: 70px 20px;
     text-align: center;
 }
 
 .about h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: #0b3d2e;
 }
 
 .about p {
-    max-width: 800px;
-    margin: auto;
-    font-size: 18px;
+    max-width: 850px;
+    margin: 15px auto;
+    font-size: 19px;
+    color: #333;
 }
 
-/* CARDS */
+.about img {
+    margin: 25px auto;
+    max-width: 600px;
+    border-radius: 12px;
+}
+
+/* --------------------------------------------------
+   CARDS SECTION
+-------------------------------------------------- */
 .cards {
-    padding: 50px 20px;
+    padding: 70px 20px;
     text-align: center;
 }
 
 .cards h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+    font-size: 38px;
+    margin-bottom: 40px;
+    color: #0b3d2e;
 }
 
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
 }
 
 .card {
-    background-color: white;
-    width: 90%;
-    max-width: 260px;
+    background: white;
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 14px;
+    text-decoration: none;
+    color: #222;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    transition: 0.3s ease;
 }
 
-/* FOOTER */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    font-size: 22px;
+    color: #0b3d2e;
+}
+
+.card p {
+    font-size: 17px;
+    color: #444;
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
 footer {
-    background-color: #0b3d2e;
+    background: #0b3d2e;
     color: white;
     text-align: center;
-    padding: 25px;
-    margin-top: 40px;
+    padding: 30px;
+    margin-top: 60px;
+    font-size: 16px;
 }
 
-/* MOBILE RESPONSIVE */
+/* --------------------------------------------------
+   MOBILE RESPONSIVE
+-------------------------------------------------- */
 @media (max-width: 900px) {
-    .hero h1 { font-size: 38px; }
-    .hero p { font-size: 17px; }
-
-    header {
-        padding: 20px;
-    }
+    .hero h1 { font-size: 48px; }
+    .hero p { font-size: 20px; }
 }
 
 @media (max-width: 700px) {
 
-    /* Show hamburger menu */
+    /* Show hamburger */
     #menu-toggle {
         display: block;
     }
 
-    /* Hide links until toggled */
-    nav .nav-links {
+    /* Hide nav links initially */
+    .nav-links {
         display: none;
         flex-direction: column;
-        background-color: white;
+        background: white;
         width: 100%;
-        padding: 15px;
+        padding: 20px;
         border-top: 1px solid #ddd;
     }
 
-    nav .nav-links.active {
+    .nav-links.active {
         display: flex;
     }
 
     nav a {
-        padding: 10px 0;
-        font-size: 18px;
+        padding: 12px 0;
+        font-size: 20px;
     }
 
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .about h2,
-    .cards h2 {
-        font-size: 28px;
-    }
-
-    .about p {
-        font-size: 16px;
-    }
+    .hero h1 { font-size: 40px; }
+    .hero p { font-size: 18px; }
 }
 
 @media (max-width: 480px) {
-    .hero h1 { font-size: 28px; }
-    .hero p { font-size: 15px; }
-    .hero button { font-size: 14px; padding: 10px 20px; }
+    .hero h1 { font-size: 32px; }
+    .hero p { font-size: 16px; }
+    .btn { font-size: 16px; padding: 12px 24px; }
 }

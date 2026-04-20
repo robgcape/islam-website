@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- By Grant Capers -->
+    <!-- Rebuilt by Grant Capers + Copilot -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Black Ummah</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Header -->
-    <header>
+    <header class="header">
         <div class="logo">The Black Ummah</div>
 
-        <!-- Mobile Menu Button -->
         <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
 
         <nav>
@@ -29,102 +29,135 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <img src="images/colors-in-islamic-architecture_1.jpg" alt="Islamic Prayer">
-        <h1>The Black Ummah</h1>
-        <p>Exploring faith, history, and the legacy of African-American Muslims.</p>
-        <button>Learn More</button>
+        <div class="hero-overlay"></div>
+        <img src="images/colors-in-islamic-architecture_1.jpg" alt="Islamic Architecture">
+
+        <div class="hero-content">
+            <h1>The Black Ummah</h1>
+            <p>Exploring faith, history, and the legacy of African-American Muslims.</p>
+            <a href="#america" class="btn">Learn More</a>
+        </div>
     </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section class="about fade-in">
         <h2>About Islam in America</h2>
         <p>
-            Islam has been present in America since the 17th and 18th centuries.
-            Enslaved West African Muslims brought their faith with them, forming
-            the earliest roots of Islam in the United States. Today, Islam continues
-            to shape communities across the country.
+            Islam has been present in America since the 1600s, brought by enslaved West African Muslims 
+            who carried their faith, culture, and scholarship across the Atlantic. Despite forced 
+            conversion and cultural erasure, many maintained elements of Islamic identity.
+        </p>
+        <p>
+            Today, Islam is one of the fastest-growing religions in the United States. American Muslims 
+            contribute to education, civil rights, science, art, and community leadership across the nation.
         </p>
     </section>
 
     <!-- Explore Cards -->
-    <section class="cards">
+    <section class="cards fade-in">
         <h2>Explore More</h2>
+
         <div class="card-container">
 
-            <div class="card">
+            <a href="#beliefs" class="card">
                 <img src="images/5pillars.jpg" alt="Pillars of Islam">
                 <h3>Beliefs & Practices</h3>
-                <p>Learn about the Five Pillars and daily life practices in Islam.</p>
-            </div>
+                <p>Learn about the Five Pillars and daily life in Islam.</p>
+            </a>
 
-            <div class="card">
+            <a href="#quran" class="card">
                 <img src="images/quran.jpg" alt="Holy Quran">
                 <h3>The Qur'an</h3>
                 <p>Discover the holy book of Islam and its structure.</p>
-            </div>
+            </a>
 
-            <div class="card">
+            <a href="#america" class="card">
                 <img src="images/mosque.jpg" alt="Mosque in America">
                 <h3>Islam in America</h3>
                 <p>Explore the history and growth of Islam in the U.S.</p>
-            </div>
+            </a>
 
-            <div class="card">
+            <a href="#blackmuslims" class="card">
                 <img src="images/aamuslims.jpg" alt="African-American Muslims">
-                <h3>African American Muslims</h3>
+                <h3>African-American Muslims</h3>
                 <p>Learn about influential leaders and their legacy.</p>
-            </div>
+            </a>
 
         </div>
     </section>
 
     <!-- Beliefs Section -->
-    <section id="beliefs" class="about">
+    <section id="beliefs" class="about fade-in">
         <h2>Beliefs & Practices</h2>
-        <img src="images/fivepillars.jpg" alt="Five Pillars">
+        <img src="images/fivepillars.jpg" alt="Five Pillars of Islam">
+
         <p>
-            Islam is built upon the Five Pillars: Shahada (faith), Salah (prayer),
-            Zakat (charity), Sawm (fasting during Ramadan), and Hajj (pilgrimage to Mecca).
-            These pillars guide daily life and spiritual discipline.
+            Islam is built upon the Five Pillars:
+        </p>
+        <ul>
+            <li><strong>Shahada:</strong> Declaration of faith.</li>
+            <li><strong>Salah:</strong> Five daily prayers.</li>
+            <li><strong>Zakat:</strong> Charity to support those in need.</li>
+            <li><strong>Sawm:</strong> Fasting during Ramadan.</li>
+            <li><strong>Hajj:</strong> Pilgrimage to Mecca.</li>
+        </ul>
+
+        <p>
+            These pillars guide a Muslim’s spiritual life, discipline, and connection to God and community.
         </p>
     </section>
 
     <!-- Qur'an Section -->
-    <section id="quran" class="about">
+    <section id="quran" class="about fade-in">
         <h2>The Qur'an</h2>
         <img src="images/qurankaaba.jpg" alt="Quran in front of Kaaba">
+
         <p>
-            The Qur'an is the holy book of Islam, believed to be the word of God
-            revealed to the Prophet Muhammad. It is written in Arabic and is divided
-            into chapters called Surahs.
+            The Qur'an is the central religious text of Islam, believed to be the literal word of God 
+            revealed to the Prophet Muhammad over 23 years. It contains guidance on faith, morality, 
+            law, and personal conduct.
+        </p>
+        <p>
+            The Qur'an is divided into 114 chapters (Surahs) and is recited in Arabic. Millions of Muslims 
+            around the world memorize it in full or in part.
         </p>
     </section>
 
     <!-- Islam in America Section -->
-    <section id="america" class="about">
+    <section id="america" class="about fade-in">
         <h2>Islam in America</h2>
-        <img src="images/animatedmosque.jpg" alt="Animated Mosque with American Flag">
+        <img src="images/animatedmosque.jpg" alt="Mosque with American Flag">
+
         <p>
-            Islam in America has grown significantly over the centuries. Today,
-            millions of Muslims live across the United States, contributing to
-            culture, education, politics, and community life.
+            Islam in America has deep historical roots. Enslaved African Muslims were among the earliest 
+            Muslims in the country, and their legacy continues through modern African-American Muslim 
+            communities.
+        </p>
+        <p>
+            Today, American Muslims come from diverse backgrounds—African-American, Arab, South Asian, 
+            West African, Latino, and more—forming a vibrant and growing part of the nation’s identity.
         </p>
     </section>
 
     <!-- African-American Muslims Section -->
-    <section id="blackmuslims" class="about">
+    <section id="blackmuslims" class="about fade-in">
         <h2>African-American Muslims</h2>
         <img src="images/malcolmali.jpg" alt="Malcolm X and Muhammad Ali">
+
         <p>
-            African-American Muslims have played a major role in American Islamic
-            history. Leaders such as Malcolm X and Muhammad Ali brought national
-            attention to Islam and civil rights.
+            African-American Muslims have shaped the religious and cultural landscape of the United States. 
+            Figures like Malcolm X, Muhammad Ali, and Imam Warith Deen Mohammed played major roles in 
+            civil rights, spiritual reform, and community empowerment.
+        </p>
+        <p>
+            Today, African-American Muslims continue to lead in activism, scholarship, and community 
+            development, preserving a legacy of resilience and faith.
         </p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Islam in America Project | Educational Use Only</p>
+        <p>© 2026 The Black Ummah | Educational Use Only</p>
     </footer>
 
 <script>
