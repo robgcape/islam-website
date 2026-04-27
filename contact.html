@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <script>
+        // Grant Capers
+        // Date: 4/12/2026
+        // Project: JavaScript Form Validation
+        // This function checks if the form fields are filled out correctly before submission.
+
+        function validateForm() {
+            let name = document.forms["myForm"]["name"].value;
+            let email = document.forms["myForm"]["email"].value;
+            let password = document.forms["myForm"]["password"].value;
+
+            if (name === "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            if (email === "") {
+                alert("Email must be filled out");
+                return false;
+            }
+
+            if (!email.includes("@")) {
+                alert("Enter a valid email");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">The Black Ummah</div>
+    <button id="menu-toggle">☰</button>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="beliefs.html">Beliefs</a>
+            <a href="quran.html">Qur'an</a>
+            <a href="america.html">Islam in America</a>
+            <a href="blackmuslims.html">African-American Muslims</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <img src="images/mosque.jpg" alt="Contact Banner">
+    <div class="hero-content">
+        <h1>Contact Us</h1>
+        <p>Have questions or feedback? Send us a message.</p>
+    </div>
+</section>
+
+<section class="about fade-in">
+    <h2>Send a Message</h2>
+    <p>Please fill out the form below. All fields are required.</p>
+
+    <form name="myForm" onsubmit="return validateForm()" class="contact-form">
+        <label>Name:</label>
+        <input type="text" name="name" placeholder="Enter your name">
+
+        <label>Email:</label>
+        <input type="text" name="email" placeholder="Enter your email">
+
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Enter a password">
+
+        <input type="submit" value="Submit" class="btn">
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 The Black Ummah | Educational Use Only</p>
+</footer>
+
+<script>
+document.getElementById("menu-toggle").onclick = function() {
+    document.querySelector(".nav-links").classList.toggle("active");
+};
+</script>
+
+</body>
