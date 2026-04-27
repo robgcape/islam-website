@@ -100,6 +100,7 @@ p {
                 linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.75));
 }
 
+/* FIX: Make hero text white */
 .hero-content {
     position: absolute;
     inset: 0;
@@ -107,19 +108,21 @@ p {
     flex-direction: column;
     justify-content: center;
     padding: 0 8%;
-    color: #fff;
+    color: #ffffff !important;
     max-width: 650px;
 }
 
 .hero-content h1 {
     font-size: 2.6rem;
     margin-bottom: 0.75rem;
+    color: #ffffff !important;
 }
 
 .hero-content p {
     font-size: 1.05rem;
     max-width: 520px;
     margin-bottom: 1.25rem;
+    color: #ffffff !important;
 }
 
 /* Button */
